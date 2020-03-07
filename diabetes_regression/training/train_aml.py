@@ -43,6 +43,7 @@ def register_dataset(
     dataset = dataset.register(workspace=aml_workspace,
                                name=dataset_name,
                                create_new_version=True)
+    # weird, but it returns a different object, with more properties populated  
     dataset = Dataset.get_by_id(aml_workspace, dataset.id)
 
     return dataset
