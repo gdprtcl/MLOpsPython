@@ -29,7 +29,7 @@ variables:
 - name: 'greenReleaseName'
   value: 'model-green'
 - name: 'SCORE_SCRIPT'
-  value: 'scoring/scoreA.py'
+  value: 'scoring/scoreB.py'
 
 stages:
 - stage: 'Building'
