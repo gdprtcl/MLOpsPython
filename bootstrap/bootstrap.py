@@ -32,8 +32,8 @@ class Helper:
     #     print(self._project_directory)
 
     def renamefiles(self):
-        # Rename all files starting with diabetes_regression with project name
-        strtoreplace = "diabetes_regression"
+        # Rename all files starting with diabetes_regression2 with project name
+        strtoreplace = "diabetes_regression2"
         dirs = [".pipelines", r"ml_service/pipelines"]
         for dir in dirs:
             normDir = os.path.normpath(dir)
@@ -46,7 +46,7 @@ class Helper:
                     os.rename(src, dst)
 
     def renamedir(self):
-        dir = "diabetes_regression"
+        dir = "diabetes_regression2"
         src = os.path.join(self._project_directory, dir)
         for path, subdirs, files in os.walk(src):
             for name in files:
@@ -59,7 +59,7 @@ class Helper:
 
     def deletedir(self):
         # Delete unwanted directories
-        dirs = ["docs", r"diabetes_regression"]
+        dirs = ["docs", r"diabetes_regression2"]
         if (platform.system() == "Windows"):
             cmd = 'rmdir /S /Q "{}"'
         else:
@@ -104,10 +104,10 @@ def replaceprojectname(project_dir, project_name, rename_name):
             r"ml_service/pipelines/diabetes_regression_build_train_pipeline.py",  # NOQA: E501
             r"ml_service/pipelines/diabetes_regression_verify_train_pipeline.py",  # NOQA: E501
             r"ml_service/util/create_scoring_image.py",
-            r"diabetes_regression/conda_dependencies.yml",
-            r"diabetes_regression/evaluate/evaluate_model.py",
-            r"diabetes_regression/register/register_model.py",
-            r"diabetes_regression/training/test_train.py"]  # NOQA: E501
+            r"diabetes_regression2/conda_dependencies.yml",
+            r"diabetes_regression2/evaluate/evaluate_model.py",
+            r"diabetes_regression2/register/register_model.py",
+            r"diabetes_regression2/training/test_train.py"]  # NOQA: E501
 
     for dir in dirs:
         file = os.path.join(project_dir, os.path.normpath(dir))
@@ -136,7 +136,7 @@ def main(args):
         # helper.clonerepo()
         helper.cleandir()
         replaceprojectname(project_directory, project_name,
-                           "diabetes_regression")
+                           "diabetes_regression2")
         replaceprojectname(project_directory, project_name, "diabetes")
         helper.renamefiles()
         helper.renamedir()

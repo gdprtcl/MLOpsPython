@@ -39,7 +39,7 @@ def main():
         name="Train Model",
         script_name="train_with_r.py",
         compute_target=aml_compute,
-        source_directory="diabetes_regression/training/R",
+        source_directory="diabetes_regression2/training/R",
         runconfig=run_config,
         allow_reuse=False,
     )
