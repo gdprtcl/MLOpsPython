@@ -27,7 +27,7 @@ container: mlops
 variables:
 - group: devopsforai-aml-vg
 - name: 'SCORE_SCRIPT'
-  value: 'scoring/scoreB.py'
+  value: 'scoring/coreB.py'
 
 steps:
 - task: AzureCLI@1

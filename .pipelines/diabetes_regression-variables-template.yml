@@ -16,7 +16,7 @@ variables:
     value: register/register_model.py
     # The path to the model scoring script relative to SOURCES_DIR_TRAIN
   - name: SCORE_SCRIPT
-    value: scoring/score.py
+    value: scoring/core.py
 
   # Azure ML Variables
   - name: EXPERIMENT_NAME
@@ -31,7 +31,7 @@ variables:
   - name: TRAINING_PIPELINE_NAME
     value: "diabetes-Training-Pipeline"
   - name: MODEL_NAME
-    value: diabetes_regression_model3.pkl
+    value: diabetes_regression_model4.pkl
 
   # AML Compute Cluster Config
   - name: AML_ENV_NAME
