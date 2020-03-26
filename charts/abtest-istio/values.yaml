@@ -11,5 +11,5 @@ weight:
   blue: 50
 
 uri:
-  prefix: /score2
+  prefix: /core
 

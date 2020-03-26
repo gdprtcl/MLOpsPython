@@ -1,4 +1,4 @@
-entryScript: score1.py
+entryScript: core.py
 runtime: python
 condaFile: ../conda_dependencies.yml
 extraDockerfileSteps:

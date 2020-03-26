@@ -27,7 +27,7 @@ spec:
   http:
   - match:
     - uri:
-        prefix: /score
+        prefix: /core
       headers:
         x-api-version:
           exact: 'blue'
@@ -38,7 +38,7 @@ spec:
           number: {{ .Values.svc.port }}
   - match:
     - uri:
-        prefix: /score
+        prefix: /core
       headers:
         x-api-version:
           exact: 'green'
